@@ -1,0 +1,114 @@
+@import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+
+@font-face {
+    font-family: "Pokemon";
+    src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot");
+    src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff") format("woff"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon") format("svg");
+}
+
+.corpo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.corpo::before{
+    content: " ";
+    background-color: rgba(4, 18, 19, 0.09);
+    height: 100vh;
+    position: absolute;
+    transform: rotate(156deg) translate(0, 310px);
+}
+.pesquisa {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+.pesquisa input {
+    border: 2px solid #0075BE;
+    height: 35px;
+    width: 200px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 0 10px;
+}
+
+.pesquisa input:focus {
+    outline: none;
+}
+
+.pesquisa button {
+    background-color: #FFCC00;
+    border: 2px solid #0075BE;
+    height: 35px;
+    width: 35px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+}
+
+.resultados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.pokenome {
+    font-family: 'Pokemon', sans-serif !important;
+    font-size: 5em;
+    letter-spacing: 5px;
+    color: #0075BE;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FFCC00;
+    margin: 20px auto 0 auto;
+    text-transform: capitalize;
+    filter: drop-shadow(2px 4px 6px black);
+    text-align: center;
+    line-height: 80px;
+    z-index: 99999;
+}
+
+.imagemPokemon {
+    height: 400px;
+    width: fit-content;
+    animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(2px 4px 6px black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 0 auto;
+    z-index: 9999999;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    .imagemPokemon {
+        height: 340px;
+        margin: 20px auto;
+    }
+    .pokenome {
+        font-size: 4em;
+        margin: 0 auto;
+    }
+}
