@@ -1,8 +1,11 @@
 {
   "name": "api-pokemon-axios",
   "version": "0.1.0",
+  "homepage": "https://allvasc.github.io/api-pokemon-axios",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -17,6 +20,7 @@
   },
   "devDependencies": {
     "eslint": "8.14.0",
-    "eslint-config-next": "12.1.5"
+    "eslint-config-next": "12.1.5",
+    "gh-pages": "^3.2.3"
   }
 }

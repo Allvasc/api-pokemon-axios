@@ -3,12 +3,12 @@ import pokeapi from '../functions/pokeapi'
 import estilos from "../styles/pokemon-color.module.css"
 import { FcSearch } from "react-icons/fc";
 
-export default function pesquisaPokemon() {
+export default function Pokemoncolor() {
 
-    const [input, setInput] = useState('')
-    const [pokemon, setPokemon] = useState({})
-    const [pokeimage, setPokeimage] = useState('')
-    const [pokecolor, setPokecolor] = useState('')
+    const [Input, setInput] = useState('')
+    const [Pokemon, setPokemon] = useState({})
+    const [Pokeimage, setPokeimage] = useState('')
+    const [Pokecolor, setPokecolor] = useState('')
 
     async function handleSubmit() {
 
@@ -33,7 +33,7 @@ export default function pesquisaPokemon() {
     return (
         <div className={estilos.corpo} style={
             {
-                backgroundColor: pokecolor.name,
+                backgroundColor: Pokecolor.name,
             }
         }>
             <div className={estilos.pesquisa}>
@@ -41,8 +41,8 @@ export default function pesquisaPokemon() {
                 <button onClick={handleSubmit} ><FcSearch /></button>
             </div>
             <div className='resultados'>
-                <h1 className={estilos.pokenome}>{pokemon.name}</h1>
-                <img className={estilos.imagemPokemon} src={pokeimage.front_shiny} />
+                <h1 className={estilos.pokenome}>{Pokemon.name}</h1>
+                <img className={estilos.imagemPokemon} src={Pokeimage.front_shiny}/>
             </div>
 
         </div>
